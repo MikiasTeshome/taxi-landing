@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem/* 16px */;
+  padding-left: 1rem/* 16px */;
+}
+@media (min-width: 640px) {
+  .container {
+      max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+      max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+      max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+      max-width: 1280px;
+      padding-right: 40px;
+      padding-left: 40px;
+  }
+}
+@media (min-width: 1536px) {
+  .container {
+      max-width: 1536px;
+      padding-right: 128px;
+      padding-left: 128px;
+  }
+}
+
+.card {
+  background: #14142d;
+  transition: background .3s ease, transform .2s ease;
+ }
+ 
+ .card-info {
+  transition: transform .2s ease, opacity .2s ease;
+ }
+ 
+ 
+ /*Card footer*/
+ .card-social {
+  transform: translateY(200%);
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+ }
+
+ /*Hover*/
+ .card:hover {
+  background: transparent;
+ }
+ 
+ .card:hover .card-info {
+  transform: translateY(-5%);
+ }
+ 
+ .card:hover .card-social {
+  transform: translateY(30%);
+  opacity: 1;
+ }
+ 
+ .effect-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 2px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.underline-text:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  margin-top: 10px;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  border-bottom: 2px solid;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.hoverButton {
+  display: none;
+}
+
+.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.effect-underline:hover + .hoverButton {
+  display: block;
+}
+
+
+.underline-text:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.transitionEffect {
+  @apply transition ease-in-out hover:-translate-y-1 delay-150 hover:scale-105 duration-300
+}
+
+.lineHeight {
+  line-height: 1.2em;
+}
+
