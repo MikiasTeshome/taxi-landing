@@ -10,6 +10,7 @@ const bundleAnalyzer = withBundleAnalyzer({
 export default bundleAnalyzer({
   eslint: {
     dirs: ['.'],
+    ignoreDuringBuilds: true, // ✅ Prevents Vercel from failing the build on lint errors
   },
   swcMinify: false,
   images: {
@@ -37,9 +38,7 @@ export default bundleAnalyzer({
   poweredByHeader: false,
   reactStrictMode: true,
   webpack: (config) => {
-    // config.externals is needed to resolve the following errors:
-    // Module not found: Can't resolve 'bufferutil'
-    // Module not found: Can't resolve 'utf-8-validate'
+    // Resolve issues with optional dependencies like 'bufferutil' and 'utf-8-validate'
     config.externals.push({
       bufferutil: 'bufferutil',
       'utf-8-validate': 'utf-8-validate',

@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <div className="container">
       <div className="items-center justify-between space-y-10 md:flex md:space-y-0">
-        <div className="relative mx-auto flex h-[300px] w-[300px] items-center justify-center md:mx-0 lg:h-[500px] lg:w-[500px] ">
+        <div className="relative mx-auto flex h-[300px] w-[300px]] items-center justify-center md:mx-0 lg:h-[500px] lg:w-[500px] ">
           <Image
             src={aboutUsImage}
             alt="taxi map"
