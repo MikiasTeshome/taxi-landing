@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        'button-primary': '#fece00',
+        'button-primary': '#0bbf60',
         'custom-black': '#242424',
         'custom-gray': '#f6f6f6',
         'custom-dark-gray': '#434343',
